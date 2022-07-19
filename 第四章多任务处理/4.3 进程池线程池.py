@@ -10,7 +10,7 @@ from multiprocessing import Process, Pool
 
 def fn(name):
     for i in range(1000):
-        print(name, i)
+        return name, i
 
 
 if __name__ == '__main__':
@@ -25,7 +25,7 @@ if __name__ == '__main__':
     # 创建进程池
     pool = Pool(processes=50)
     for i in range(100):
-        pool.apply_async(func=fn, args=('进程%d'%i,))
+        r = pool.apply_async(func=fn, args=('进程%d'%i,))
     pool.close()
     pool.join()
 

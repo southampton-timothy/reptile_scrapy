@@ -23,9 +23,9 @@ class CarproPipeline:
         comment = item['comment']
         mark = item['mark']
         self.inf_list.append({'name':name, 'comment':comment,'mark':mark })
-        inf_df = pd.DataFrame(self.inf_list)
-        inf_df.to_excel('./id4_comment.xlsx')
-        inf_df.to_csv('./id4_comment.csv')
+        # inf_df = pd.DataFrame(self.inf_list)
+        # inf_df.to_excel('./id4_comment.xlsx')
+        # inf_df.to_csv('./id4_comment.csv')
         return item
 
     def close_spider(self, spider):
